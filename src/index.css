@@ -1,35 +1,25 @@
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  color: #F9FFF8;
 }
 
 body {
   margin: 0;
   background-color: black;
-  color: wheat;
-}
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  color: #F9FFF8;
 }
 
 .App {
   text-align: center;
   align-items: center;
   padding: auto;
-  border: 2px solid gray;
   justify-content: center;
   display: flex;
 }
 
-h1 {
-  color: wheat;
-}
-
 #calculatorWrap {
-  width: 380px;
+  width: 400px;
   border: 1px solid yellowgreen;
   padding-left: auto;
   padding-right: auto;
@@ -43,22 +33,47 @@ h1 {
 .buttons {
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 380px;
+  width: 400px;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
 }
 
 .btn {
   width: 80px;
   height: 80px;
   margin: 5px;
+  border: none;
   border-radius: 40px;
-  font-size: large;
   cursor: pointer;
+  font-size: 30px;
+  
+}
+
+.btn:hover {
+  opacity: 75%;
+}
+
+.btn:active {
+  opacity: 50%;
 }
 
 #zero {
-  width: 185px;
+  width: 175px;
+  grid-column: span 2;
+}
+
+.btn-function {
+  background-color: #A5A5A5;
+  color:black;
+}
+
+.btn-digit {
+  background-color: #333333;
+
+}
+
+.btn-operation {
+  background-color: #EFA43E;
 }
