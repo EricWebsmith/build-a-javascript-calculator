@@ -63,11 +63,12 @@ function reducer(state, action) {
                 formula = formula.substring(0, formula.length-1);
             }
             const display = eval(state.formula);
+            
             console.log(display);
             return {
                 ...state,
                 formula,
-                display,
+                display: display+'',
                 calculated: true
             }
 
